@@ -7,6 +7,7 @@
 
 <script>
 import Home from './components/Home.vue'
+import axios from 'axios';
 
 export default {
 
@@ -15,13 +16,27 @@ export default {
     Home
   },
   created() {
-   fetch("https://ms0e9sptyj.execute-api.us-east-1.amazonaws.com/users/92535540-f473-4490-8dee-458092d0e346/videos", {
+
+  axios.get('https://ms0e9sptyj.execute-api.us-east-1.amazonaws.com/users/92535540-f473-4490-8dee-458092d0e346/videos', {
+    headers:{
+    'X-PRIVATEKEY': "111f09c8-1222-419a-8370-2d615c72f8df",
+    'X-API-KEY': '4083bd32-9556-47ab-8b08-93b684c380d2'
+  },
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+  /* fetch("https://ms0e9sptyj.execute-api.us-east-1.amazonaws.com/users/92535540-f473-4490-8dee-458092d0e346/videos", {
     method: "GET",
     headers:{
     'X-PRIVATEKEY': "111f09c8-1222-419a-8370-2d615c72f8df",
     'X-API-KEY': '4083bd32-9556-47ab-8b08-93b684c380d2'
   },
-  }).then(res=> console.log(res)).catch(err=> console.log(err))
+  }).then(res=> console.log(res)).catch(err=> console.log(err))*/
 }
 }
 </script>
@@ -54,16 +69,33 @@ button {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     transition: all 0.1s ease-in;
+    float: left; 
   }
+  
  header {
-  padding: 60px;
+  padding: 10px;
   text-align: left;
-  color: black;
+  color: green;
   font-size: 15px;
 }
 .thumbnail
 {
    width:100px;
    height:100px;
+}
+.details
+{
+  display: inline-block; 
+  text-align: right; 
+  width: 100%
+}
+
+.detailsInner
+{
+    margin-bottom: 10px;
+}
+.videos
+{ 
+  float:left
 }
 </style>

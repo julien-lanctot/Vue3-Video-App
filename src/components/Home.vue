@@ -1,14 +1,17 @@
 <template>
 <div>
+  
   <section  v-for="(video) in videos" :key="video.id"> 
-      <img class="thumbnail" :src="video.thumbnail">
+  <div><img class="thumbnail" :src="video.thumbnail"></div>
+      <div>{{video.description}}</div>
        <router-link :to="{ name: 'details', params: { 
             id: video.id, 
             title: video.title , 
             description : video.description, 
             duration : video.duration,
-            format : video.format} }">
-            Details of {{video.description}}  
+            format : video.format,
+            thumbnail : video.thumbnail} }">
+            Details
       </router-link>
       
       </section>
