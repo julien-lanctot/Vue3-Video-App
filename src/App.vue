@@ -15,7 +15,7 @@ export default {
     Home
   },
   created() {
-   fetch("https://ms0e9sptyj.execute-api.useast-1.amazonaws.com/users/92535540-f473-4490-8dee-458092d0e346/videos", {
+   fetch("https://ms0e9sptyj.execute-api.us-east-1.amazonaws.com/users/92535540-f473-4490-8dee-458092d0e346/videos", {
     method: "GET",
     headers:{
     'X-PRIVATEKEY': "111f09c8-1222-419a-8370-2d615c72f8df",
@@ -60,5 +60,10 @@ button {
   text-align: left;
   color: black;
   font-size: 15px;
+}
+.thumbnail
+{
+   width:100px;
+   height:100px;
 }
 </style>
