@@ -1,15 +1,17 @@
 <template>
-<Header></Header>
+ <header>
+      <router-link to="/">Home</router-link>
+  </header>
+   <router-view />
 </template>
 
 <script>
 import Home from './components/Home.vue'
-import Header from './components/Header.vue'
+
 export default {
 
   name: 'App',
   components: {
-    Header,
     Home
   },
   created() {
@@ -32,5 +34,31 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+input[type=text], select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button {
+    border: none;
+    border-radius: 3px;
+    margin: auto 0;
+    padding: 0.5rem 0.75rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: all 0.1s ease-in;
+  }
+ header {
+  padding: 60px;
+  text-align: left;
+  color: black;
+  font-size: 15px;
 }
 </style>

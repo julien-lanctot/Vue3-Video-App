@@ -6,12 +6,12 @@
     Description : <input type="text">
  </div>
  <div>
-    Duration :
+    Duration : 1234
  </div>
  <div>
-    Format : 
+    Format : mp4
  </div>
-  <button @click="$router.push('/')">Click to Navigate</button>
+  <button @click="$router.push('/')" type="submit" class="btn btn__primary btn__lg" >Back</button>
 
 </template>
 
