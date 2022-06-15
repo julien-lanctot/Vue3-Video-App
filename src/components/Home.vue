@@ -1,7 +1,12 @@
 <template>
 <div>
   <section  v-for="(video) in videos" :key="video.id"> 
-       <router-link :to="{ name: 'details', params: { id: video.id, title: video.title , description : video.description} }">
+       <router-link :to="{ name: 'details', params: { 
+            id: video.id, 
+            title: video.title , 
+            description : video.description, 
+            duration : video.duration,
+            format : video.format} }">
             Details of {{video.description}}  
       </router-link>
       </section>
