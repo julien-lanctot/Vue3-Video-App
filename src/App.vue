@@ -1,6 +1,5 @@
 <template>
-  <Header></Header>
-  <Home msg="Welcome to Your Vue.js Appblablabla"/>
+<Header></Header>
 </template>
 
 <script>
@@ -14,14 +13,6 @@ export default {
     Home
   },
   created() {
-    // GET request using axios with set headers
-  /* const config = {
-  headers:{
-    'X-PRIVATEKEY': "111f09c8-1222-419a-8370-2d615c72f8df",
-    'X-API-KEY': '4083bd32-9556-47ab-8b08-93b684c380d2'
-  }
-};*/
-
    fetch("https://ms0e9sptyj.execute-api.useast-1.amazonaws.com/users/92535540-f473-4490-8dee-458092d0e346/videos", {
     method: "GET",
     headers:{

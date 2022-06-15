@@ -1,5 +1,17 @@
 <template>
-    <h1>
-    test
-    </h1>
+ <div>
+    Title : <input type="text" >
+ </div>
+ <div>
+    Description : <input type="text">
+ </div>
+ <div>
+    Duration :
+ </div>
+ <div>
+    Format : 
+ </div>
+  <button @click="$router.push('/')">Click to Navigate</button>
+
 </template>
+
