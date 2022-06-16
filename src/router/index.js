@@ -1,24 +1,21 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../components/Home.vue'
-import VideoDetails from '../components/VideoDetails.vue'
+/* eslint-disable */ 
+import Vue from 'vue'
+import Router from 'vue-router'
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/movie/:id',
-    name: 'details',
-    component: VideoDetails,
-    props:true
-  }
-]
+Vue.use(Router)
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/movie/:id',
+      name: 'details',
+      component: VideoDetails,
+      props:true
+    }
+  ]
 })
-
-export default router

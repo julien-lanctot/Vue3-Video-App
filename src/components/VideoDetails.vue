@@ -1,5 +1,5 @@
 <template>
-
+<div>
 <div class="details">
    <div class="detailsInner">
     Title : <input type="text" v-model="videoTitle">
@@ -13,10 +13,11 @@
  <div class="detailsInner">
     Format : {{videoFormat}}
  </div>
-   </div>
+</div>
   <button @click="$router.push('/')" class="btn btn__primary btn__lg" >Back</button>
+ </div>
+ 
 </template>
-
 <script>
 export default {
     props: ['title', 'description', 'duration', 'format', 'thumbnail'],

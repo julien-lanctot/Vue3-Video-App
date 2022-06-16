@@ -1,14 +1,15 @@
+/* eslint-disable */
 <template>
  <header>
       <router-link to="/">Home</router-link>
+      <router-view />
   </header>
-   <router-view />
 </template>
 
 <script>
 import Home from './components/Home.vue'
-import axios from 'axios';
-
+import axios from 'axios'
+/* eslint-disable */ 
 export default {
 
   name: 'App',
